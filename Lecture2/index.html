@@ -16,12 +16,18 @@
     <nav>
         <h3>Main menu</h3>
         <ul style="list-style-type: none">
-            <li> <a href="#">main</a> </li>
-            <li> <a href="#">contact</a> </li>
-            <li> <a href="#">speakers</a> </li>
+            <li> <a href="http://cs.skku.edu" target="_blank">main</a> </li>
+            <li> <a href="#moonArticle">contact</a> </li>
+            <li> <a href="#space">speakers</a> </li>
             <li> <a href="#">research</a> </li>
         </ul>
     </nav>
+
+    <pre>
+        for(int i =0; i<10; i++){
+            printf("Code example.\n");
+        }
+    </pre>
 
     <aside>
         <p><em>Sectioning root</em> elements are <code>&lt;blockquote&gt;</code>,
@@ -39,16 +45,27 @@
 
     </article>
     <section>
-        <h1>Space</h1>
+        <h1 id = "space">Space</h1>
         <article>
             <h1>Sun</h1>
             Some article about it.
         </article>
         <article>
-            <h1>Moon</h1>
+            <h1 id ="moonArticle">Moon</h1>
             Some article about Moon.
         </article>
     </section>
+
+    <table style="width: 100%; color: red" border="1">
+        <tr>
+            <th>item</th> <th>size</th> <th>price</th>
+        </tr>
+
+        <tr>
+            <td>CESS2530</td> <td> 324235.11</td> <td>4900$</td>
+        </tr>
+        <caption>This table is for Illustration</caption>
+    </table>
 
     <!-- footer -->
     <footer>
