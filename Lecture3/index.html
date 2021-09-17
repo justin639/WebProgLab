@@ -2,16 +2,111 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Img tag exercise</title>
+    <title>Media tag exercise</title>
 </head>
 <body>
-    <!--Basic <img> tag exercise-->
-    <img src="images/everland.jpg" alt="Everland" width="300" border="20">
+    <!--<form> tag-->
+    <div>
+        <h1>Welcome to my pages</h1>
+
+        <h3>Register your name to guest page</h3>
+
+        <form class="" action="guest.html" method="get">
+            <table>
+                <tr>
+                    <td>First Name:</td>
+                    <td><input type="text"
+                               name="first"
+                               value=""
+                               placeholder="Enter your name"
+                               title="Username should only contain lowercase letters."
+                               pattern="{a-z}"><br></td>
+                </tr>
+                <tr>
+                    <td>Last Name:</td>
+                    <td>
+                        <input type="text" name="last" value="">
+                    </td>
+                </tr>
+            </table>
+
+            <input type="submit" name="" value="Send">
+
+            <button type="submit" name="button">Send</button><br>
+
+            <textarea name="message" rows="5" cols="40"></textarea><br>
+
+            <select name="coffee">
+                <option value="black">Black</option>
+                <option value="cream" selected>With cream</option>
+                <option value="sugar">With sugar</option>
+                <option value="regular">With cream & sugar</option>
+            </select><br>
+
+            <fieldset>
+                <legend>Fieldset</legend>
+                <td>First Name:</td>
+                <td><input type="text"
+                           name="firstName"
+                           value=""
+                           placeholder="Enter your name"
+                           title="Username should only contain lowercase letters."
+                           pattern="{a-z}"><br></td>
+            </fieldset><br>
+            <input type="hidden" name="secretInfo" value="Chrome">
+        </form>
+    </div>
+    <br><hr>
+
+    <div id="image">
+        <!--Basic <img> tag exercise-->
+        <img src="images/everland.jpg" alt="Everland" width="300" border="20">
+        <br>
+        <!--Making thumbnail with <a> tag-->
+        <a href="images/CaribeanBay.jpg" target="_blank">
+            <img src="images/CaribeanBaySmall.jpg" alt="CaribbeanBay"
+                 title="Click here to zoom out"></a>
+        <!--Responsive images -> use <picture> tag-->
+        <picture>
+            <source media="(min-width: 800px)"
+                    srcset="images/Elsa480.jpg">
+            <source media="(min-width: 600px)"
+                    srcset="images/Elsa320.jpg">
+            <img alt="Elsa smiling"
+                 srcset="images/Elsa240.jpg">
+        </picture>
+    </div>
+    <hr>
+    <!--Basic <audio> tag-->
+    <div id="audio">
+        <h1>Yesterday Beatles</h1>
+        <!--autoplay not working why?-->
+        <audio controls autoplay loop src="media/Yesterday.mp3">
+        </audio>
+        <audio>
+            <source src="media/Yesterday.mp3" type="audio/mpeg">
+            Your browser does not support the audio tag.
+        </audio>
+    </div>
+    <hr>
+    <!--Basic <video> tag-->
+    <iframe width="560" height="315"
+            src="https://www.youtube.com/embed/q604eed4ad0"
+            title="YouTube video player"
+            frameborder="5"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
     <br>
-    <!--Making thumbnail with <a> tag-->
-    <a href="images/CaribeanBay.jpg" target="_blank">
-      <img src="images/CaribeanBaySmall.jpg" alt="CaribbeanBay"
-           title="Click here to zoom out"></a>
+    <!--not working with source tag why?-->
+    <video controls
+           width="500" poster="images/Elsa480.jpg">
+        <source src="media/Alike _ byDanielLara.mp4" type="video/">
+        <source src="media/Alike _ byDanielLara.webm" type="video/">
+        Your browser does not support video tag
+    </video>
+
+    <hr>
+
 
 </body>
 </html>
