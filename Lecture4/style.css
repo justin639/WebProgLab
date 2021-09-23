@@ -1,0 +1,47 @@
+/*All style*/
+* { color: blue;}
+h1 {
+    color: green;
+    background: grey;
+    font-size: 5em;
+}
+/*Pseudo CSS*/
+p:first-line{
+    font-size: 1.3rem;
+}
+a:hover{
+    color: yellow;
+    text-size: xx-large;
+}
+a:visited{
+    color: red;
+    text-size: 20px;
+}
+/*Using Id values*/
+/*Id CSS override although first out*/
+#login{
+    text-align: right;
+    text-size: 10px;
+    color: black;
+    background: red;
+}
+/*Using Class values*/
+.className{
+    color: peru;
+}
+/*Many CSS skills*/
+div>p{
+    background: aquamarine;
+}
+div+p{
+    background: aquamarine;
+}
+div~p{
+    background: aquamarine;
+}
+/*the span CSS override with the id CSS above. Why?*/
+h2,h3,span{
+    background: blanchedalmond;
+    color: peru;
+    font-family: cursive;
+}
