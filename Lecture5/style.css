@@ -26,16 +26,36 @@
     display: flex;
     height: 200px;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
 .navigation>li{
+    flex-grow: 2;
     padding: 1em;
     border:2px dashed #000;
+}
+.navigation .mainPage{
+    border: 2px dashed red;
+    flex: 5 100px;
+    order: 2;
+    align-self: flex-end;
+}
+.navigation .page1{
+    border: 2px dashed green;
+    flex-grow: 5;
+    order: 1;
+    align-self: flex-start;
+}
+
+.navigation > li:nth-child(3){
+    border: 2px dashed blue;
+    flex-grow: 5;
+    align-self: stretch;
 }
 
 .box0{
