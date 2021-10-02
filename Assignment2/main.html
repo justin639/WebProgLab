@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SKKU RESTAURANT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <div class="left">
+        <img src="assets/icon.png"
+             style="height: 45px;
+                padding: 20px 60px;
+                vertical-align: middle">
+    </div>
+    <div class="right" align="right">
+        <p style="padding-right: 60px;margin: 20px"><a href="login.html"><b>Login</b></a></p>
+    </div>
+
+</header>
+
+<div class="mainBody">
+    <div id="sideBar">
+        <ul class="navigation">
+            <li><a href="#HOME"><b>HOME</b></a></li>
+            <li><a href="#MENU"><b>MENU</b></a></li>
+            <li><a href="#GALLERY"><b>GALLERY</b></a></li>
+            <li><a href="#CONTACT"><b>CONTACT</b></a></li>
+        </ul>
+    </div>
+    <div class="contentPlane">
+        <div id="HOME" style="position: relative">
+            <img src="assets/bg_main.png" width="100%">
+            <p> Welcome to<br>SKKU RESTAURANT</p>
+        </div>
+        <div id="GALLERY">
+            <div id="innerPadding">
+                <img src="assets/chef_img.png" width="350">
+                <span>
+                    <p style="font-size: 65px">Welcome to SKKU <br> RESTAURANT</p>
+                    <p style="font-size: 30px">Over the next twelve months we will feature, successively,
+                    four menus – or ‘volumes’ – each of which presents some
+                    of SKKU’s unique dishes and the thinking behind them.
+                    By walking in SKKU’s footsteps, you will discover for yourself
+                    the story of the restaurant, with all its ground-breaking originality,
+                    experimentation and innovation.</p>
+                </span>
+
+            </div>
+        </div>
+        <div id="MENU">
+            <div id="OFFER">
+                <img src="assets/bg_offer.png" width="100%">
+            </div>
+            <div id="SPECIAL MENU">
+                <p> SPECIAL MENU</p>
+                <table width="100%">
+                    <tr>
+                        <td>
+                            <img src="assets/beef_steak_img.png" width="100%" style="max-width: 300px">
+                        </td>
+                        <td>
+                            <img src="assets/exc_fish_img.png" width="100%" style="max-width: 300px">
+                        </td>
+                        <td>
+                            <img src="assets/fish_soup_img.png" width="100%" style="max-width: 300px">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>BEEF STEAK</th>
+                        <th>EXCLUSIVE FISH</th>
+                        <th>FISH SOUP</th>
+                    </tr>
+                    <tr>
+                        <td><b>12,000₩</b></td>
+                        <td><b>15,000₩</b></td>
+                        <td><b>10,000₩</b></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div id="CONTACT">
+            <p style="font-size: 40px;padding-left: 80px;line-height: 300px"> <b>CONTACT US</b></p>
+            <div align="right">
+                <form action="guest.html" method="get" style="padding-right: 8%; padding-top: 40px">
+                    <table style="text-align: right; border-spacing: 0 20px">
+                        <tr>
+                            <td class="dataTitle">Name</td><td style="width: 500px"><input class="data" type="text" name="name" value="" style="width: 100%"></td>
+                        </tr>
+                        <tr>
+                            <td class="dataTitle">Email</td><td style="width: 500px"><input class="data" type="text" name="email" value="" style="width: 100%"></td>
+                        </tr>
+                        <tr>
+                            <td class="dataTitle" style="vertical-align: top">Message</td>
+                            <td style="width: 500px">
+                                <textarea class="data" name="message" rows="5" cols="17" style="height: 100%; resize: none;"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <button id="sendContact" type="submit" name="sendBtn"><b>SEND</b></button>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

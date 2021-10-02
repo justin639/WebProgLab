@@ -1,0 +1,135 @@
+/* Tag CSS */
+body{
+    font-family: sans-serif;
+    padding: 0px;
+    margin: 0px;
+    border: 2px;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+button{
+    border-style: none;
+    background-color: #eeeeef;
+    color: #3e3e3e;
+}
+
+header{
+    padding: 0px;
+    margin: 0px;
+    border-bottom: 1px solid black;
+    align-items: center;
+    align-content: center;
+    height: 90px;
+    background-color: #3e3e3e;
+    color: #eeeeef;
+    font-size: 30px;
+}
+
+/* Class CSS */
+.left{
+    background-color: inherit;
+    color: inherit;
+    width: 50%;
+    float: left;
+}
+.right{
+    background-color: inherit;
+    color: inherit;
+    width: 50%;
+    float: right;
+}
+
+.mainBody{
+    padding: 0px;
+    margin: 0px;
+    border: 2px;
+
+    display: grid;
+    grid-template-columns: 270px 85.85%;
+    grid-auto-rows: minmax(100px, auto);
+    justify-content: stretch;
+    align-items: stretch;
+
+}
+.navigation{
+    padding: 100px 0px 0px 0px;
+    margin: inherit;
+    border: inherit;
+    text-align: center;
+    list-style-type: none;
+}
+
+.navigation > li{
+    padding-top: 50px;
+    background-color: #3e3e3e;
+    color: #eeeeef;
+    font-size: 30px;
+}
+
+.contentPlane{
+
+}
+
+.data{
+    height: 45px;
+    width: 100%;
+    border-style: none;
+    font-size: inherit;
+    background-color: #eeeeef;
+    color: #3e3e3e;
+}
+
+.dataTitle{
+    padding-right: 15px;
+}
+/* ID CSS */
+#HOME{
+    padding: inherit;
+    margin: inherit;
+    border: 2px;
+    text-align: center;
+    color: #eeeeef;
+    font-size: 80px;
+}
+#HOME > p{
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -150%);
+}
+#sideBar{
+    padding: inherit;
+    margin: inherit;
+    border-right: 1px solid black;
+    background-color: #3e3e3e;
+}
+#innerPadding{
+    padding-left: 10%;
+    padding-top: 10px;
+}
+#GALLERY{
+
+}
+#MENU{
+    text-align: center;
+}
+
+#OFFER{}
+
+#SPECIAL\ MENU{}
+
+#CONTACT{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    font-size: 27px;
+    background-color: #3e3e3e;
+    color: #eeeeef;
+}
+#sendContact{
+    width: 160px;
+    height: 50px;
+    border-radius: 12px;
+    font-size: 27px;
+}
