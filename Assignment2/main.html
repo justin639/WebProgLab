@@ -6,127 +6,163 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-    <div>
-        <img src="assets/icon.png"
-             style="height: 40px;
-                padding: 20px 60px;
-                vertical-align: middle">
-    </div>
-    <div align="right">
-        <p style="padding-right: 60px;margin: 20px"><a href="login.html"><b>Login</b></a></p>
-    </div>
+    <!--Header section-->
+    <header>
+        <!-- Used CSS display : grid to divide section -->
+        <!-- Left Section -->
+        <div>
+            <img src="assets/icon.png"
+                 style="height: 40px;
+                    padding: 20px 60px;
+                    vertical-align: middle">
+        </div> <!--End Left-->
 
-</header>
+        <!-- Right Section -->
+        <div align="right">
+            <p style="padding-right: 60px;margin: 20px"><a href="login.html"><b>Login</b></a></p>
+        </div> <!--End Right-->
+    </header> <!--End Header section-->
 
-<div class="mainBody">
-    <div id="sideBar">
-        <ul class="navigation">
-            <li><a href="#HOME"><b>HOME</b></a></li>
-            <li><a href="#MENU"><b>MENU</b></a></li>
-            <li><a href="#GALLERY"><b>GALLERY</b></a></li>
-            <li><a href="#CONTACT"><b>CONTACT</b></a></li>
-        </ul>
-    </div>
-    <div id="contentPlane">
-        <div id="HOME" style="position: relative">
-            <img src="assets/bg_main.png" width="100%">
-            <p> Welcome to<br>SKKU&nbsp;RESTAURANT</p>
-            <form action="order.html">
-                <button type="submit"><b>ORDER</b></button>
-            </form>
-        </div>
-        <div id="GALLERY">
-            <img src="assets/chef_img.png" height="520">
-            <div>
-                <p style="font-size: 60px; margin-bottom: 40px; line-height: 65px"><i>Welcome to<br>SKKU RESTAURANT</i></p>
-                <p style="font-size: 30px; max-width: 800px; text-align: justify; line-height: 33px">Over the next twelve months we will feature, successively,
-                    four menus – or ‘volumes’ – each of which presents some
-                    of SKKU’s unique dishes and the thinking behind them.
-                    By walking in SKKU’s footsteps, you will discover for yourself
-                    the story of the restaurant, with all its ground-breaking originality,
-                    experimentation and innovation.</p>
-            </div>
-        </div>
-        <div id="MENU">
-            <div id="OFFER" style="position: relative">
-                <img src="assets/bg_offer.png" width="100%">
-                <p style="font-size: 57px; margin: 10px; color: #eeeeef"><b>SPECIAL OFFERS</b></p>
-                <div id="offerPlain" onclick="window.location.href='order.html'">
-                    <img src="assets/student_set_img.png" width="260">
-                    <div>
-                        <p style="font-size: 45px; margin-bottom: 20px"><i><b>STUDENT SET</b></i></p>
-                        <p style="font-size: 45px; color: red; margin-bottom: 20px"><b><del>&nbsp;10,000 ₩&nbsp;&nbsp;</del></b></p>
-                        <p style="font-size: 45px; color: green;padding-left: 20px"><b>8,000 ₩</b></p>
-                    </div>
+    <!-- Main Body section -->
+    <div class="mainBody">
+        <!-- Side Bar section -->
+        <div id="sideBar">
+            <ul class="navigation">
+                <!-- Used hover CSS for some Change -->
+                <li><a href="#HOME"><b>HOME</b></a></li>
+                <li><a href="#MENU"><b>MENU</b></a></li>
+                <li><a href="#GALLERY"><b>GALLERY</b></a></li>
+                <li><a href="#CONTACT"><b>CONTACT</b></a></li>
+            </ul>
+        </div> <!--End Side Bar section-->
+
+        <!-- Content section -->
+        <div id="contentPlane">
+            <!-- Home section -->
+            <div id="HOME" style="position: relative">
+                <!--Used CSS position to write text & Btn at the center of img-->
+                <img src="assets/bg_main.png" width="100%">
+
+                <p> Welcome to<br>SKKU&nbsp;RESTAURANT</p>
+
+                <!-- Btn directing to order.html(not made) -->
+                <!-- Used hover CSS for some Change -->
+                <form action="order.html">
+                    <button type="submit"><b>ORDER</b></button>
+                </form>
+            </div> <!--End Home section-->
+
+            <!-- Gallery section -->
+            <div id="GALLERY">
+                <!-- Used CSS display : flex to set text next to img -->
+                <img src="assets/chef_img.png" height="520">
+                <div>
+                    <p style="font-size: 60px; margin-bottom: 40px; line-height: 65px"><i>Welcome to<br>SKKU RESTAURANT</i></p>
+                    <p style="font-size: 30px; max-width: 800px; text-align: justify; line-height: 33px">Over the next twelve months we will feature, successively,
+                        four menus – or ‘volumes’ – each of which presents some
+                        of SKKU’s unique dishes and the thinking behind them.
+                        By walking in SKKU’s footsteps, you will discover for yourself
+                        the story of the restaurant, with all its ground-breaking originality,
+                        experimentation and innovation.</p>
                 </div>
-            </div>
-            <div id="SPECIAL MENU">
-                <p style="font-size: 57px; margin: 40px; color: #3e3e3e"> <b>SPECIAL MENU</b></p>
-                <table width="100%" style="padding-bottom: 120px; padding-right: 35px;padding-left: 35px">
-                    <tr>
-                        <td>
-                            <div class="menuOption" onclick="window.location.href='order.html'">
-                                <img src="assets/beef_steak_img.png" height="100%" style="max-width: 200px">
-                                <div>
-                                    <p style="margin-bottom: 8%">BEEF STEAK</p>
-                                    <p style="margin-bottom: 25%">Chef's menu</p>
-                                    <p>12,000 ₩</p>
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="menuOption" onclick="window.location.href='order.html'">
-                                <img src="assets/exc_fish_img.png" height="100%" style="max-width: 200px">
-                                <div>
-                                    <p style="margin-bottom: 8%">EXCLUSIVE FISH</p>
-                                    <p style="margin-bottom: 25%">Chef's menu</p>
-                                    <p>15,000 ₩</p>
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="menuOption" onclick="window.location.href='order.html'">
-                                <img src="assets/fish_soup_img.png" height="100%" style="max-width: 200px">
-                                <div>
-                                    <p style="margin-bottom: 8%">FISH SOUP</p>
-                                    <p style="margin-bottom: 25%">Chef's menu</p>
-                                    <p>10,000 ₩</p>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-        <div id="CONTACT">
-            <p style="font-size: 40px;padding-left: 80px;line-height: 100%"> <b>CONTACT US</b></p>
-            <div align="right">
-                <form action="guest.html" method="get" style="padding-right: 100px; padding-top: 40px">
-                    <table style="text-align: right; border-spacing: 0 20px">
+            </div> <!--End Gallery section-->
+
+            <!-- Menu section -->
+            <div id="MENU">
+                <!-- Special Offer section -->
+                <div id="OFFER" style="position: relative">
+                    <img src="assets/bg_offer.png" width="100%">
+                    <!--Used CSS position to set text & Offer Plain at the center of img-->
+                    <p style="font-size: 57px; margin: 10px; color: #eeeeef"><b>SPECIAL OFFERS</b></p>
+
+                    <!-- Offer Plain section -->
+                    <!-- Redirects to order.html -->
+                    <div id="offerPlain" onclick="window.location.href='order.html'">
+                        <!-- Used CSS display : grid to set text next to img -->
+                        <img src="assets/student_set_img.png" width="260">
+                        <div>
+                            <p style="font-size: 45px; margin-bottom: 20px"><i><b>STUDENT SET</b></i></p>
+                            <p style="font-size: 45px; color: red; margin-bottom: 20px"><b><del>&nbsp;10,000 ₩&nbsp;&nbsp;</del></b></p>
+                            <p style="font-size: 45px; color: green;padding-left: 20px"><b>8,000 ₩</b></p>
+                        </div>
+                    </div> <!--End Offer Plain section-->
+                </div> <!--End Special Offer section-->
+
+                <!-- Special Menu section -->
+                <div id="SPECIAL MENU">
+                    <p style="font-size: 57px; margin: 40px; color: #3e3e3e"> <b>SPECIAL MENU</b></p>
+                    <!-- Used CSS display : grid to set text next to img in menuOption class -->
+                    <!-- Each redirects to order.html -->
+                    <table width="100%" style="padding-bottom: 120px; padding-right: 35px;padding-left: 35px">
                         <tr>
-                            <td class="dataTitle">Name</td><td style="width: 550px"><input class="data" type="text" name="name" value="" style="width: 100%"></td>
-                        </tr>
-                        <tr>
-                            <td class="dataTitle">Email</td><td style="width: 550px"><input class="data" type="text" name="email" value="" style="width: 100%"></td>
-                        </tr>
-                        <tr>
-                            <td class="dataTitle" style="vertical-align: top">Message</td>
-                            <td style="width: 550px">
-                                <textarea class="data" name="message" rows="5" cols="17" style="height: 100%; resize: none;"></textarea>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td></td>
                             <td>
-                                <button id="sendContact" type="submit"><b>SEND</b></button>
+                                <div class="menuOption" onclick="window.location.href='order.html'">
+                                    <img src="assets/beef_steak_img.png" height="100%" style="max-width: 200px">
+                                    <div>
+                                        <p style="margin-bottom: 8%">BEEF STEAK</p>
+                                        <p style="margin-bottom: 25%">Chef's menu</p>
+                                        <p>12,000 ₩</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="menuOption" onclick="window.location.href='order.html'">
+                                    <img src="assets/exc_fish_img.png" height="100%" style="max-width: 200px">
+                                    <div>
+                                        <p style="margin-bottom: 8%">EXCLUSIVE FISH</p>
+                                        <p style="margin-bottom: 25%">Chef's menu</p>
+                                        <p>15,000 ₩</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="menuOption" onclick="window.location.href='order.html'">
+                                    <img src="assets/fish_soup_img.png" height="100%" style="max-width: 200px">
+                                    <div>
+                                        <p style="margin-bottom: 8%">FISH SOUP</p>
+                                        <p style="margin-bottom: 25%">Chef's menu</p>
+                                        <p>10,000 ₩</p>
+                                    </div>
+                                </div>
                             </td>
                         </tr>
                     </table>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
+                </div> <!--End Special Menu section-->
+            </div> <!--End Menu section-->
+
+            <!-- Contact Us section -->
+            <div id="CONTACT">
+                <!-- Used CSS display : grid to divide section -->
+                <!-- Left Section -->
+                <p style="font-size: 40px;padding-left: 80px;line-height: 100%"> <b>CONTACT US</b></p> <!--End Left-->
+
+                <!-- Right Section -->
+                <div align="right">
+                    <form action="guest.html" method="get" style="padding-right: 100px; padding-top: 40px">
+                        <table style="text-align: right; border-spacing: 0 20px">
+                            <tr>
+                                <td class="dataTitle">Name</td><td style="width: 550px"><input class="data" type="text" name="name" value="" style="width: 100%"></td>
+                            </tr>
+                            <tr>
+                                <td class="dataTitle">Email</td><td style="width: 550px"><input class="data" type="text" name="email" value="" style="width: 100%"></td>
+                            </tr>
+                            <tr>
+                                <td class="dataTitle" style="vertical-align: top">Message</td>
+                                <td style="width: 550px">
+                                    <textarea class="data" name="message" rows="5" cols="17" style="height: 100%; resize: none;"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <button id="sendContact" type="submit"><b>SEND</b></button>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div> <!--End Right-->
+            </div> <!--End Contact Us section-->
+        </div> <!--End Content section-->
+    </div> <!--End Main Body section-->
 </body>
 </html>
