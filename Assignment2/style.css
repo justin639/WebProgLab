@@ -1,15 +1,19 @@
 /* Tag CSS */
+/* Set <body> tag CSS */
 body{
     font-family: SansSerif;
     padding: 0px;
     margin: 0px;
     border: 2px;
-}
+} /* end <body> */
 
+/* Set <a> tag CSS*/
 a{
     color: inherit;
     text-decoration: none;
-}
+} /* end <a> */
+
+/* Set <button> tag CSS*/
 button{
     cursor: pointer;
     border-style: none;
@@ -20,9 +24,9 @@ button:hover{
     border: 2px solid #eeeeef;
     background-color: transparent;
     color: #eeeeef;
-}
+} /* end <button> */
 
-
+/* Set <header> tag CSS*/
 header{
     padding: 0px;
     margin: 0px;
@@ -34,9 +38,10 @@ header{
     background-color: #3e3e3e;
     color: #eeeeef;
     font-size: 30px;
-}
-
+} /* end <header> */
+/*--------------------------------------------------*/
 /* Class CSS */
+/* Set mainBody class CSS*/
 .mainBody{
     padding: 0px;
     margin: 0px;
@@ -45,8 +50,9 @@ header{
     display: flex;
     justify-content: stretch;
     align-items: stretch;
+} /* end mainBody class */
 
-}
+/* Set sideBar.navigation class CSS*/
 .navigation{
     width: 270px;
     padding: 80px 0px 0px 0px;
@@ -55,7 +61,6 @@ header{
     text-align: center;
     list-style-type: none;
 }
-
 .navigation > li{
     padding-top: 50px;
     background-color: #3e3e3e;
@@ -66,8 +71,9 @@ header{
     text-decoration: underline #eeeeef;
     background-color: #3e3e3e;
     color: #eeeeef;
-}
+} /* end navigation class */
 
+/* Set MENU/SPECIAL MENU.menuOption class CSS*/
 .menuOption{
     display: flex;
     justify-content: center;
@@ -83,8 +89,9 @@ header{
 }
 .menuOption > div > p{
     margin: 0px;
-}
+} /* end menuOption class */
 
+/* Set CONTACT.data class CSS*/
 .data{
     height: 45px;
     width: 100%;
@@ -92,14 +99,15 @@ header{
     font-size: inherit;
     background-color: #eeeeef;
     color: #3e3e3e;
-}
+} /* end data class */
 
+/* Set CONTACT.dataTitle class CSS*/
 .dataTitle{
     padding-right: 15px;
-}
-
+} /* end dataTitle class */
+/*--------------------------------------------------*/
 /* ID CSS */
-
+/* Set HOME id CSS*/
 #HOME{
     padding: inherit;
     margin: inherit;
@@ -122,14 +130,18 @@ header{
     height: 90px;
     border-radius: 12px;
     font-size: 45px;
-}
+} /* end HOME id */
+
+/* Set sideBar id CSS*/
 #sideBar{
     padding: inherit;
     margin: inherit;
     border-right: 1px solid black;
     background-color: #3e3e3e;
-}
-#GALLERY{
+} /* end sideBar id */
+
+/* Set GALLERY id CSS*/
+#GALLERY {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -143,27 +155,26 @@ header{
 }
 #GALLERY > div > p{
     margin: 0px;
-}
+} /* end GALLERY id */
 
+/* Set MENU id CSS*/
 #MENU{
     text-align: center;
-}
+}  /* end MENU id */
 
-#OFFER{
-
-}
+/* Set MENU/OFFER id CSS*/
 #OFFER > p{
     position: absolute;
     top: 10%; left: 46.5%;
     transform: translate(-50%, -50%);
 }
-
 #OFFER > div{
     position: absolute;
     top: 50%; left: 49%;
     transform: translate(-50%, -50%);
-}
+} /* end OFFER id */
 
+/* Set MENU/OFFER/offerPlain id CSS*/
 #offerPlain{
     background-color: #eeeeef;
     text-align: left;
@@ -174,21 +185,16 @@ header{
     padding-bottom: 60px;
     cursor: pointer;
 }
-
 #offerPlain > div{
     padding-left: 50px;
     padding-right: 100px;
 }
-
 #offerPlain > div > p{
     line-height: 45px;
     margin: 0px;
-}
+} /* end offerPlain id */
 
-#SPECIAL\ MENU{
-
-}
-
+/* Set CONTACT id CSS*/
 #CONTACT{
     display: grid;
     grid-template-columns: 50% 50%;
@@ -201,4 +207,4 @@ header{
     height: 50px;
     border-radius: 12px;
     font-size: 27px;
-}
+} /* end CONTACT id */
