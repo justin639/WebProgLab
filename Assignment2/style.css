@@ -1,6 +1,6 @@
 /* Tag CSS */
 body{
-    font-family: sans-serif;
+    font-family: SansSerif;
     padding: 0px;
     margin: 0px;
     border: 2px;
@@ -11,10 +11,17 @@ a{
     text-decoration: none;
 }
 button{
+    cursor: pointer;
     border-style: none;
     background-color: #eeeeef;
     color: #3e3e3e;
 }
+button:hover{
+    border: 2px solid #eeeeef;
+    background-color: transparent;
+    color: #eeeeef;
+}
+
 
 header{
     padding: 0px;
@@ -55,9 +62,27 @@ header{
     color: #eeeeef;
     font-size: 30px;
 }
+.navigation > li:hover{
+    text-decoration: underline #eeeeef;
+    background-color: #3e3e3e;
+    color: #eeeeef;
+}
 
-.contentPlane{
-
+.menuOption{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    text-align: left;
+}
+.menuOption:hover{
+    cursor: pointer;
+}
+.menuOption > div{
+    font-size: 28px;
+    padding: 20px;
+}
+.menuOption > div > p{
+    margin: 0px;
 }
 
 .data{
@@ -72,27 +97,31 @@ header{
 .dataTitle{
     padding-right: 15px;
 }
+
 /* ID CSS */
+
 #HOME{
     padding: inherit;
     margin: inherit;
     text-align: center;
     color: #eeeeef;
-    font-size: 560%;
+    font-size: 85px;
 }
 #HOME > p{
     position: absolute;
-    top: 50%; left: 50%;
+    top: 48%; left: 50%;
     transform: translate(-50%, -110%);
 }
-#HOME > button{
+#HOME > form{
+    position: absolute;
+    top: 72%; left: 50%;
+    transform: translate(-50%, -110%);
+}
+#HOME > form > button{
     width: 270px;
     height: 90px;
     border-radius: 12px;
     font-size: 45px;
-    position: absolute;
-    top: 72%; left: 50%;
-    transform: translate(-50%, -110%);
 }
 #sideBar{
     padding: inherit;
@@ -131,10 +160,30 @@ header{
 
 #OFFER > div{
     position: absolute;
-    top: 40%; left: 46.5%;
+    top: 50%; left: 49%;
     transform: translate(-50%, -50%);
 }
 
+#offerPlain{
+    background-color: #eeeeef;
+    text-align: left;
+    display: grid;
+    grid-template-columns: 260px 490px;
+    padding-left: 60px;
+    padding-top: 80px;
+    padding-bottom: 60px;
+    cursor: pointer;
+}
+
+#offerPlain > div{
+    padding-left: 50px;
+    padding-right: 100px;
+}
+
+#offerPlain > div > p{
+    line-height: 45px;
+    margin: 0px;
+}
 
 #SPECIAL\ MENU{
 

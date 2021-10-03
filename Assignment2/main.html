@@ -28,11 +28,13 @@
             <li><a href="#CONTACT"><b>CONTACT</b></a></li>
         </ul>
     </div>
-    <div class="contentPlane">
+    <div id="contentPlane">
         <div id="HOME" style="position: relative">
             <img src="assets/bg_main.png" width="100%">
-            <p> Welcome to<br>SKKU RESTAURANT</p>
-            <button><b>ORDER</b></button>
+            <p> Welcome to<br>SKKU&nbsp;RESTAURANT</p>
+            <form action="order.html">
+                <button type="submit"><b>ORDER</b></button>
+            </form>
         </div>
         <div id="GALLERY">
             <img src="assets/chef_img.png" height="520">
@@ -49,60 +51,75 @@
         <div id="MENU">
             <div id="OFFER" style="position: relative">
                 <img src="assets/bg_offer.png" width="100%">
-                <p style="font-size: 60px; margin: 10px; color: #eeeeef"><b>SPECIAL OFFERS</b></p>
-                <div style="background-color: #eeeeef">
-                    <img src="assets/student_set_img.png" width="250">
-                    <p></p>
+                <p style="font-size: 57px; margin: 10px; color: #eeeeef"><b>SPECIAL OFFERS</b></p>
+                <div id="offerPlain" onclick="window.location.href='order.html'">
+                    <img src="assets/student_set_img.png" width="260">
+                    <div>
+                        <p style="font-size: 45px; margin-bottom: 20px"><i><b>STUDENT SET</b></i></p>
+                        <p style="font-size: 45px; color: red; margin-bottom: 20px"><b><del>&nbsp;10,000 ₩&nbsp;&nbsp;</del></b></p>
+                        <p style="font-size: 45px; color: green;padding-left: 20px"><b>8,000 ₩</b></p>
+                    </div>
                 </div>
             </div>
             <div id="SPECIAL MENU">
-                <p style="font-size: 60px; margin: 30px; color: #3e3e3e"> <b>SPECIAL MENU</b></p>
-                <table width="100%">
+                <p style="font-size: 57px; margin: 40px; color: #3e3e3e"> <b>SPECIAL MENU</b></p>
+                <table width="100%" style="padding-bottom: 120px; padding-right: 35px;padding-left: 35px">
                     <tr>
                         <td>
-                            <img src="assets/beef_steak_img.png" width="100%" style="max-width: 300px">
+                            <div class="menuOption" onclick="window.location.href='order.html'">
+                                <img src="assets/beef_steak_img.png" height="100%" style="max-width: 200px">
+                                <div>
+                                    <p style="margin-bottom: 8%">BEEF STEAK</p>
+                                    <p style="margin-bottom: 25%">Chef's menu</p>
+                                    <p>12,000 ₩</p>
+                                </div>
+                            </div>
                         </td>
                         <td>
-                            <img src="assets/exc_fish_img.png" width="100%" style="max-width: 300px">
+                            <div class="menuOption" onclick="window.location.href='order.html'">
+                                <img src="assets/exc_fish_img.png" height="100%" style="max-width: 200px">
+                                <div>
+                                    <p style="margin-bottom: 8%">EXCLUSIVE FISH</p>
+                                    <p style="margin-bottom: 25%">Chef's menu</p>
+                                    <p>15,000 ₩</p>
+                                </div>
+                            </div>
                         </td>
                         <td>
-                            <img src="assets/fish_soup_img.png" width="100%" style="max-width: 300px">
+                            <div class="menuOption" onclick="window.location.href='order.html'">
+                                <img src="assets/fish_soup_img.png" height="100%" style="max-width: 200px">
+                                <div>
+                                    <p style="margin-bottom: 8%">FISH SOUP</p>
+                                    <p style="margin-bottom: 25%">Chef's menu</p>
+                                    <p>10,000 ₩</p>
+                                </div>
+                            </div>
                         </td>
-                    </tr>
-                    <tr>
-                        <th>BEEF STEAK</th>
-                        <th>EXCLUSIVE FISH</th>
-                        <th>FISH SOUP</th>
-                    </tr>
-                    <tr>
-                        <td><b>12,000₩</b></td>
-                        <td><b>15,000₩</b></td>
-                        <td><b>10,000₩</b></td>
                     </tr>
                 </table>
             </div>
         </div>
         <div id="CONTACT">
-            <p style="font-size: 40px;padding-left: 80px;line-height: 300px"> <b>CONTACT US</b></p>
+            <p style="font-size: 40px;padding-left: 80px;line-height: 100%"> <b>CONTACT US</b></p>
             <div align="right">
-                <form action="guest.html" method="get" style="padding-right: 8%; padding-top: 40px">
+                <form action="guest.html" method="get" style="padding-right: 100px; padding-top: 40px">
                     <table style="text-align: right; border-spacing: 0 20px">
                         <tr>
-                            <td class="dataTitle">Name</td><td style="width: 500px"><input class="data" type="text" name="name" value="" style="width: 100%"></td>
+                            <td class="dataTitle">Name</td><td style="width: 550px"><input class="data" type="text" name="name" value="" style="width: 100%"></td>
                         </tr>
                         <tr>
-                            <td class="dataTitle">Email</td><td style="width: 500px"><input class="data" type="text" name="email" value="" style="width: 100%"></td>
+                            <td class="dataTitle">Email</td><td style="width: 550px"><input class="data" type="text" name="email" value="" style="width: 100%"></td>
                         </tr>
                         <tr>
                             <td class="dataTitle" style="vertical-align: top">Message</td>
-                            <td style="width: 500px">
+                            <td style="width: 550px">
                                 <textarea class="data" name="message" rows="5" cols="17" style="height: 100%; resize: none;"></textarea>
                             </td>
                         </tr>
                         <tr>
                             <td></td>
                             <td>
-                                <button id="sendContact" type="submit" name="sendBtn"><b>SEND</b></button>
+                                <button id="sendContact" type="submit"><b>SEND</b></button>
                             </td>
                         </tr>
                     </table>
@@ -112,6 +129,5 @@
         </div>
     </div>
 </div>
-
 </body>
 </html>
