@@ -26,3 +26,5 @@ console.log(age);
 
 console.log("Hello");
 console.log("15+2-7");
+
+alert("Welcome to the first lecture in javascript.");

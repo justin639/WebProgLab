@@ -1,0 +1,33 @@
+html {
+    color: cornflowerblue;
+    font-family: sans-serif;
+    min-width: 1199px;
+}
+
+button {
+    background-color: white;
+    color: cornflowerblue;
+    border: 1px solid cornflowerblue;
+    width: 40%;
+    height: 25px;
+}
+
+body {
+    background-image: url("/assets/background.png");
+}
+
+#backGround {
+
+}
+
+#startMenu{
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -60%);
+}
+#startMenu > h1{
+    font-size: max(4vw, 32px);
+}
+#playBtn:active{
+
+}
