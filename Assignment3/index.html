@@ -4,15 +4,56 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <title>Web Programming Quiz</title>
-    <link rel="script" href="index.js">
 </head>
 <body>
-    <div id="backGround" style="text-align: center; position:relative;">
-        <img src="assets/background.png" width="100%" style="min-width: 1199px">
-        <div id="startMenu">
-            <h1>Javascript Quiz</h1>
-            <button id="playBtn" onclick="nowPlay()">Play</button>
+<!-- Start Menu section -->
+<div id="startMenu">
+    <img src="assets/background.png" width="100%" style="min-width: 1200px">
+    <div id="startContent" class="content">
+        <h1>Javascript Quiz</h1>
+        <!-- button to start quiz at first run -->
+        <button id="playBtn" onclick="  changeState()">Play</button>
+    </div>
+</div> <!-- End Start Menu section -->
+
+<!-- Quiz Problem section -->
+<div id="problemContent" hidden="true" style="padding-top: 10%;">
+    <div style="display:flex;">
+        <div class="left">
+            <p style="margin-top: 0px; margin-left: 10%">Question <span id="quizNumber"></span></p>
+            <!-- Made my progress bar with CSS -->
+            <div id="progressBar">
+                <div id="progressNow"></div>
+            </div>
+        </div>
+        <div class="right">
+            <p style="margin: 0px">Score</p>
+            <p id="score"></p>
         </div>
     </div>
+    <div style="position:relative;">
+        <!-- Empty Question. Will be filled by function setLi() -->
+        <p id="question"></p>
+        <!-- Empty list of problems. Will be filled by function setLi() -->
+        <ul id="problems">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</div> <!-- End Quiz Problem section -->
+
+<!-- End Menu section -->
+<div id="endMenu" hidden="true" style="padding-top: 10%;">
+    <div>
+        <h1 id="totalScore"></h1>
+        <!-- button for restart -->
+        <button id="endBtn" onclick="changeState()">Play Again</button>
+    </div>
+</div> <!-- End End Menu section -->
+
 </body>
+
+<script type="text/javascript" src="index.js"></script>
 </html>

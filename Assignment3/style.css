@@ -1,33 +1,148 @@
+/* Tag CSS */
+/* Set <html> tag CSS */
 html {
-    color: cornflowerblue;
+    color: rgb(86, 165, 235);
     font-family: sans-serif;
-    min-width: 1199px;
-}
+    min-width: 1200px;
+} /* end <html>*/
 
+/* Set <button> tag CSS */
 button {
     background-color: white;
-    color: cornflowerblue;
-    border: 1px solid cornflowerblue;
+    color: rgb(86, 165, 235);
+    border: 1px solid rgb(86, 165, 235);
     width: 40%;
     height: 25px;
+    transition: all 0.3s ease 0s;
 }
-
-body {
-    background-image: url("/assets/background.png");
+button:hover {
+    box-shadow: 0px 1px 10px rgb(86, 165, 235);
 }
+button:active {
+    box-shadow: none;
+} /* end <button>*/
 
-#backGround {
-
-}
-
-#startMenu{
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -60%);
-}
-#startMenu > h1{
+/* Set <h1> tag CSS */
+h1 {
     font-size: max(4vw, 32px);
-}
-#playBtn:active{
+} /* end <h1>*/
 
+/* Set <body> tag CSS */
+body {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(236, 245, 255);
+} /* end <body>*/
+
+/* Set <ul> tag CSS */
+ul {
+    list-style: none;
+    padding-inline-start: 0px;
+} /* end <ul>*/
+
+/* Set <li> tag CSS */
+li {
+    line-height: 40px;
+    margin-top: 10px;
+    height: 40px;
+    background-color: white;
 }
+li:hover {
+    box-shadow: 0px 1px 10px rgb(86, 165, 235);
+} /* end <li>*/
+/*--------------------------------------------------*/
+/* Class CSS */
+/* Set right class CSS*/
+.right {
+    width: 50%;
+    float: right;
+    text-align: right;
+} /* end right class */
+
+/* Set left class CSS*/
+.left {
+    width: 50%;
+    float: left;
+    text-align: left;
+} /* end left class */
+
+/* Set content class CSS*/
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+} /* end content class */
+
+/* Set band class CSS*/
+.band {
+    padding-left: 25%;
+    width: 50%;
+} /* end band class */
+
+/* Set marker class CSS*/
+.marker {
+    background-color: rgb(86, 165, 235);
+    display: inline-block;
+    color: white;
+    width: 8%;
+    text-align: center;
+} /* end marker class */
+
+/* Set option class CSS*/
+.option {
+    padding-left: 10px;
+    background-color: transparent;
+    box-sizing: border-box;
+} /* end option class */
+/*--------------------------------------------------*/
+/* ID CSS */
+/* Set startMenu id CSS*/
+#startMenu {
+    text-align: center;
+    position: relative;
+} /* end startMenu id */
+
+/* Set problemContent id CSS*/
+#problemContent {
+    color: black;
+    width: max(40%, 600px);
+} /* end problemContent id */
+
+/* Set progressBar id CSS*/
+#progressBar {
+    position: relative;
+    width: 50%;
+    height: 40%;
+    border: 2px solid rgb(86, 165, 235);
+    background-color: transparent;
+} /* end progressBar id */
+
+/* Set progressNow id CSS*/
+#progressNow {
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background-color: rgb(86, 165, 235);
+} /* end progressNow id */
+
+/* Set score id CSS*/
+#score {
+    color: rgb(86, 165, 235);
+    font-size: max(2vw, 32px);
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 10px;
+} /* end score id */
+
+/* Set question id CSS*/
+#question {
+    font-size: max(2vw, 32px);
+    font-weight: bold;
+} /* end question id */
+
+/* Set endMenu id CSS*/
+#endMenu {
+    text-align: center;
+} /* end endMenu id */
