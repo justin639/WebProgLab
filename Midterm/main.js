@@ -1,0 +1,1 @@
+inputStr = document.getElementById('inputNum');

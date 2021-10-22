@@ -1,11 +1,22 @@
 /* Tag CSS */
 /* Set <html> tag CSS */
 html {
-    color: rgb(86, 165, 235);
     font-family: sans-serif;
     min-width: 1200px;
 } /* end <html>*/
 
+/* Set <body> tag CSS */
 body {
-    background-color: rgb(86, 165, 235);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(236, 245, 255);
+} /* end <body>*/
+
+#numberBoard {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-gap: 20px;
 }
