@@ -1,0 +1,11 @@
+/* Tag CSS */
+/* Set <html> tag CSS */
+html {
+    color: rgb(86, 165, 235);
+    font-family: sans-serif;
+    min-width: 1200px;
+} /* end <html>*/
+
+body {
+    background-color: rgb(86, 165, 235);
+}
