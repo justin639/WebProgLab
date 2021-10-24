@@ -8,25 +8,25 @@
 <body>
 <div>
     <div>
-        <h1 style="color: rgb(86, 165, 235);">SKKU ATM</h1>
-        <p>Enter your 16 digit account number or insert your card below:</p>
-        <label>
-            <input id="inputNum" type="password" style="text-align: center">
-        </label>
+        <h1 id="initTitle" style="color: rgb(86, 165, 235)">SKKU ATM</h1>
+        <p id="inputInst">Enter your 16 digit account number or insert your card below:</p>
     </div>
+    <label>
+        <input id="inputNum" type="password" placeholder="Enter Account Number" style="text-align: center">
+    </label>
     <div id="numberBoard">
-        <button id="1" class="numBtn" onclick="inputStr.value+='1';console.log(inputStr.value)">1</button>
-        <button id="2" class="numBtn" onclick="inputStr.value+='2';console.log(inputStr.value)">2</button>
-        <button id="3" class="numBtn" onclick="inputStr.value+='3';console.log(inputStr.value)">3</button>
-        <button id="4" class="numBtn" onclick="inputStr.value+='4';console.log(inputStr.value)">4</button>
-        <button id="5" class="numBtn" onclick="inputStr.value+='5';console.log(inputStr.value)">5</button>
-        <button id="6" class="numBtn" onclick="inputStr.value+='6';console.log(inputStr.value)">6</button>
-        <button id="7" class="numBtn" onclick="inputStr.value+='7';console.log(inputStr.value)">7</button>
-        <button id="8" class="numBtn" onclick="inputStr.value+='8';console.log(inputStr.value)">8</button>
-        <button id="9" class="numBtn" onclick="inputStr.value+='9';console.log(inputStr.value)">9</button>
-        <button id="enter" class="numBtn" onclick="">Enter</button>
-        <button id="0" class="numBtn" onclick="inputStr.value+='0';console.log(inputStr.value)">0</button>
-        <button id="delete" class="numBtn" onclick="inputStr.value = inputStr.value.substring(inputStr.value.length-1)">Delete</button>
+        <button id="1" class="numBtn" onclick="clickNum(this.id)">1</button>
+        <button id="2" class="numBtn" onclick="clickNum(this.id)">2</button>
+        <button id="3" class="numBtn" onclick="clickNum(this.id)">3</button>
+        <button id="4" class="numBtn" onclick="clickNum(this.id)">4</button>
+        <button id="5" class="numBtn" onclick="clickNum(this.id)">5</button>
+        <button id="6" class="numBtn" onclick="clickNum(this.id)">6</button>
+        <button id="7" class="numBtn" onclick="clickNum(this.id)">7</button>
+        <button id="8" class="numBtn" onclick="clickNum(this.id)">8</button>
+        <button id="9" class="numBtn" onclick="clickNum(this.id)">9</button>
+        <button id="enterBtn" class="numBtn" onclick="authAccount()">Enter</button>
+        <button id="0" class="numBtn" onclick="clickNum(this.id)">0</button>
+        <button id="deleteBtn" class="numBtn" onclick="deleteNum()">Delete</button>
     </div>
 </div>
 
