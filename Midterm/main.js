@@ -1,5 +1,5 @@
 let inputStr = document.getElementById('inputNum');
-let accountData = [{num: '1111111111111111', pin: '0000'}, {num: '1111111111111110', pin: '0001'}];
+let accountData = [{num: '0000000000000000', pin: '0000'}, {num: '1111111111111111', pin: '0001'}, {num: '1111111111111110', pin: '0002'}];
 let statePIN = false;
 let currentUID = -1; // uid -1 means no UID available
 let count = 5;

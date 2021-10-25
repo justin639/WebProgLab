@@ -6,14 +6,17 @@
     <title>Welcome</title>
 </head>
 <body>
-<div>
+<div class="mainContent">
     <h1 id="initTitle" style="color: rgb(86, 165, 235)">WELCOME TO SKKU BANK</h1>
     <div id="menuBoard">
-        <button class="menuBtn">Account Information</button>
-        <button class="menuBtn">Withdraw Funds</button>
-        <button class="menuBtn">Deposit Funds</button>
-        <button class="menuBtn">Transfer</button>
+        <button id="accountInfo" class="menuBtn" onclick="window.location.href='accountInfo.html'">Account Information</button>
+        <button id="withdraw" class="menuBtn" onclick="">Withdraw Funds</button>
+        <button id="deposit" class="menuBtn" onclick="">Deposit Funds</button>
+        <button id="transfer" class="menuBtn" onclick="">Transfer</button>
     </div>
+</div>
+<div>
+    <button id="redBtn" class="menuBtn" onclick="window.location.href='mainPage.html'" style="left: 17%;width: 10%;">Return Card</button>
 </div>
 </body>
 <script type="text/javascript" src=""></script>
