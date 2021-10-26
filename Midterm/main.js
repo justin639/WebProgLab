@@ -138,7 +138,11 @@ function initInfo() {
     let temp = document.getElementById('tempLog');
     let logTable = document.getElementById('logTable');
     for (let i = 0; i < accountLog[currentUID].length; i++) {
+
         let clone = document.importNode(temp.content, true);
+        if(i%2==1){
+            clone.children[0].style.backgroundColor = '#eeeeef'
+        }
         clone.children[0].children[0].innerText = `${accountLog[currentUID][i].time}`;
         clone.children[0].children[1].innerText = `${accountLog[currentUID][i].in}`;
         clone.children[0].children[2].innerText = `${accountLog[currentUID][i].out}`;
