@@ -1,0 +1,29 @@
+#numberBoard {
+    margin-top: 25px;
+    width: min(30%, 290px);
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-gap: 25px;
+}
+
+#deleteBtn {
+    color: red;
+}
+
+#enterBtn {
+    color: green;
+}
+
+#withdrawInput{
+
+}
+
+#menuBoard {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-gap: 25px;
+}

@@ -1,0 +1,106 @@
+/* Tag CSS */
+/* Set <html> tag CSS */
+html {
+    font-family: sans-serif;
+    min-width: 1200px;
+}
+
+/* end <html>*/
+
+/* Set <body> tag CSS */
+body {
+    text-align: center;
+    background-color: rgb(236, 245, 255);
+}
+
+.mainContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* end <body>*/
+
+.menuBtn {
+    border-radius: 8px;
+    font-size: max(1.4vw, 17px);
+    color: rgb(236, 245, 255);
+    background-color: rgb(50, 69, 87);
+    border: black solid 6px;
+    height: 70px;
+    width: 30%;
+}
+
+.menuBtn:hover {
+    color: black;
+    background-color: rgb(170, 214, 231);
+}
+
+.menuBtn:active {
+    color: white;
+    background-color: black;
+}
+
+.redBtn {
+    position: relative;
+    margin-top: 25px;
+    background-color: rgb(246, 96, 62);
+    border: orangered solid 6px;
+}
+
+.redBtn:hover {
+    color: white;
+    background-color: black;
+}
+
+.redBtn:active {
+    background-color: rgb(246, 96, 62);
+}
+
+.greenBtn{
+    position: relative;
+    background-color: #51DF70;
+    border: green solid 6px;
+}
+.greenBtn:hover{
+    background-color: green;
+}
+.numBtn {
+    width: 100%;
+    height: 80px;
+}
+.withdrawBtn{
+    width: 7%;
+}
+.withdrawBtn:hover{
+    background-color: lightgray;
+}
+
+.pageTitle {
+    font-size: max(2.3vw, 28px);
+}
+
+.accountLog {
+    background-color: lightgray;
+    text-align: left;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-areas: 'date date date fundIn fundOut runBalance'
+}
+.date{
+    grid-area: date; margin: 5px;
+}
+.fundIn{
+    grid-area: fundIn; margin: 5px;
+}
+.fundOut{
+    grid-area: fundOut; margin: 5px;
+}
+.runBalance{
+    grid-area: runBalance; margin: 5px;
+}
+
+.arrowBtn{
+    width: 7%;
+}
