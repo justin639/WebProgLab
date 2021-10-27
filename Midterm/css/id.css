@@ -1,0 +1,70 @@
+/* Tag CSS */
+/* Set <html> tag CSS */
+html {
+    font-family: sans-serif;
+    min-width: 1200px;
+} /* end <html>*/
+
+/* Set <body> tag CSS */
+body {
+    text-align: center;
+    background-color: rgb(236, 245, 255);
+} /* end <body>*/
+
+/* Set <input> tag CSS */
+input {
+    text-align: center;
+} /* end <input>*/
+/*--------------------------------------------------*/
+/* ID CSS */
+/* Set numberBoard id CSS*/
+#numberBoard {
+    margin-top: 25px;
+    width: min(30%, 290px);
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-gap: 25px;
+} /* end numberBoard id */
+
+/* Set logTable id CSS*/
+#logTable {
+    border-top: black solid 1px;
+    border-bottom: black solid 1px;
+    padding: 0px;
+} /* end logTable id */
+
+/* Set tableHead id CSS*/
+#tableHead {
+    background-color: #eeeeef;
+    font-weight: bold
+} /* end tableHead id */
+
+/* Set deleteBtn id CSS*/
+#deleteBtn {
+    color: red;
+} /* end deleteBtn id */
+
+/* Set enterBtn id CSS*/
+#enterBtn {
+    color: green;
+} /* end enterBtn id */
+
+/* Set inputWithdraw id CSS*/
+#inputWithdraw {
+    border: black solid 2px;
+    background-color: white;
+    width: 7%;
+    font-size: 32px
+} /* end inputWithdraw id */
+
+/* Set menuBoard id CSS*/
+#menuBoard {
+    margin-top: 25px;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-gap: 25px;
+} /* end menuBoard id */

@@ -2,49 +2,48 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/welcomepage.css">
-    <link rel="stylesheet" href="css/authpage.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/id.css">
+    <link rel="stylesheet" href="css/class.css">
     <title>SKKU ATM</title>
 </head>
 <body>
 <div id="authPage" class="mainContent" style="align-items: center;">
     <div>
-        <h1 id="initTitle" class="pageTitle" style="color: rgb(86, 165, 235)">SKKU ATM</h1>
-        <p id="inputInst">Enter your 16 digit account number or insert your card below:</p>
+        <h1 id="initTitle" class="pageTitle">SKKU ATM</h1>
+        <p id="inputInst" class="message">Enter your 16 digit account number or insert your card below:</p>
     </div>
     <label>
-        <input id="inputNum" type="password" placeholder="Enter Account Number" style="text-align: center">
+        <input id="inputNum" class="message" type="password" placeholder="Enter Account Number">
     </label>
     <div id="numberBoard">
-        <button id="1" class="numBtn" onclick="clickNum(this.id)">1</button>
-        <button id="2" class="numBtn" onclick="clickNum(this.id)">2</button>
-        <button id="3" class="numBtn" onclick="clickNum(this.id)">3</button>
-        <button id="4" class="numBtn" onclick="clickNum(this.id)">4</button>
-        <button id="5" class="numBtn" onclick="clickNum(this.id)">5</button>
-        <button id="6" class="numBtn" onclick="clickNum(this.id)">6</button>
-        <button id="7" class="numBtn" onclick="clickNum(this.id)">7</button>
-        <button id="8" class="numBtn" onclick="clickNum(this.id)">8</button>
-        <button id="9" class="numBtn" onclick="clickNum(this.id)">9</button>
+        <button class="numBtn" onclick="clickNum(this.innerText)">1</button>
+        <button class="numBtn" onclick="clickNum(this.innerText)">2</button>
+        <button class="numBtn" onclick="clickNum(this.innerText)">3</button>
+        <button class="numBtn" onclick="clickNum(this.innerText)">4</button>
+        <button class="numBtn" onclick="clickNum(this.innerText)">5</button>
+        <button class="numBtn" onclick="clickNum(this.innerText)">6</button>
+        <button class="numBtn" onclick="clickNum(this.innerText)">7</button>
+        <button class="numBtn" onclick="clickNum(this.innerText)">8</button>
+        <button class="numBtn" onclick="clickNum(this.innerText)">9</button>
         <button id="enterBtn" class="numBtn" onclick="!statePIN ? authAccount() : authPIN()">Enter</button>
-        <button id="0" class="numBtn" onclick="clickNum(this.id)">0</button>
+        <button class="numBtn" onclick="clickNum(this.innerText)">0</button>
         <button id="deleteBtn" class="numBtn" onclick="deleteNum()">Delete</button>
     </div>
 </div>
 
 <div id="welcomePage" hidden>
     <div class="mainContent">
-        <h1 id="welcomeTitle" class="pageTitle" style="color: rgb(86, 165, 235)">WELCOME TO SKKU BANK</h1>
+        <h1 id="welcomeTitle" class="pageTitle">WELCOME TO SKKU BANK</h1>
         <div id="menuBoard">
-            <button id="accountInfo" class="menuBtn" onclick="showInfo()">Account Information</button>
-            <button id="withdraw" class="menuBtn" onclick="showWithdraw()">Withdraw Funds</button>
-            <button id="deposit" class="menuBtn" onclick="">Deposit Funds</button>
-            <button id="transfer" class="menuBtn" onclick="">Transfer</button>
+            <button id="accountInfo" class="menuBtn default round" onclick="showPage(0)">Account Information</button>
+            <button id="withdraw" class="menuBtn default round" onclick="showPage(1)">Withdraw Funds</button>
+            <button id="deposit" class="menuBtn default round" onclick="showPage(2)">Deposit Funds</button>
+            <button id="transfer" class="menuBtn default round" onclick="showPage(3)">Transfer</button>
         </div>
     </div>
     <div>
-        <button class="menuBtn redBtn"
-                onclick="authPage.style.display='flex';welcomePage.hidden=true;statePIN=false;changeState(-1)"
+        <button class="menuBtn round red redBtn"
+                onclick="returnAuth(0)"
                 style="left: 17%;width: 10%;">Return Card
         </button>
     </div>
@@ -52,10 +51,10 @@
 
 <div id="accountInfoPage" hidden>
     <div class="mainContent">
-        <h1 id="infoTitle" class="pageTitle" style="color: rgb(86, 165, 235)">Account Information</h1>
-        <p id="currentBlc"></p>
-        <div id="logTable" style="border-top: black solid 1px;border-bottom: black solid 1px;padding: 0px;">
-            <div id="tableHead" class="accountLog" style="background-color: #eeeeef">
+        <h1 id="infoTitle" class="pageTitle">Account Information</h1>
+        <p id="currentBlc" class="message">current balance</p>
+        <div id="logTable">
+            <div id="tableHead" class="accountLog">
                 <p class="date">Date</p>
                 <p class="fundIn">Funds Out</p>
                 <p class="fundOut">Funds In</p>
@@ -72,80 +71,205 @@
         </div>
     </div>
     <div>
-        <button class="menuBtn redBtn" onclick="backWelcome(0)"
+        <button class="menuBtn round red redBtn" onclick="backWelcome(0)"
                 style="left: 46%;width: 5%">Back
         </button>
     </div>
 </div>
 
-<div id="withdrawPage">
+<div id="withdrawPage" hidden>
     <div class="mainContent">
-        <div style="display: flex;justify-content: center;align-items: center">
-            <p><span>Quick Links</span><span></span>Enter the amount to withdraw<span>Quick Links</span></p>
+        <div class="rowContent">
+            <div style="width: 10%;margin-right: 30%;font-size: max(1.4vw, 22px)">Quick Links</div>
+            <div style="width: 20%;font-size: max(1vw, 15px)">Enter the amount to withdraw</div>
+            <div style="width: 10%;margin-left: 30%;font-size: max(1.4vw, 22px)">Quick Links</div>
         </div>
-        <div style="display: flex;justify-content: center;align-items: center;">
-            <button class="menuBtn withdrawBtn" onclick="">20</button>
+        <div class="rowContent">
+            <button class="menuBtn default round withdrawBtn withdrawLeft" onclick="confirmWithdraw(20)">20</button>
             <img class="arrowBtn" src="assets/uparrow100copy.png"
                  onclick="addWithdraw(100)"
                  onmouseenter="this.src='assets/uparrow100copyhover.png'"
                  onmouseleave="this.src='assets/uparrow100copy.png'"
                  onmousedown="this.src='assets/uparrow100copy.png'"
                  onmouseup="this.src='assets/uparrow100copyhover.png'">
-            <button class="menuBtn withdrawBtn" style="width: 7%" onclick="">100</button>
+            <button class="menuBtn default round withdrawBtn withdrawRight" onclick="confirmWithdraw(100)">100</button>
         </div>
-        <div style="display: flex;justify-content: center;align-items: center">
-            <button class="menuBtn withdrawBtn" onclick="">40</button>
+        <div class="rowContent">
+            <button class="menuBtn default round withdrawBtn withdrawLeft" onclick="confirmWithdraw(40)">40</button>
             <img class="arrowBtn" src="assets/uparrow20copy.png"
                  onclick="addWithdraw(20)"
                  onmouseenter="this.src='assets/uparrow20copyhover.png'"
                  onmouseleave="this.src='assets/uparrow20copy.png'"
                  onmousedown="this.src='assets/uparrow20copy.png'"
                  onmouseup="this.src='assets/uparrow20copyhover.png'">
-            <button class="menuBtn withdrawBtn" onclick="">200</button>
+            <button class="menuBtn default round withdrawBtn withdrawRight" onclick="confirmWithdraw(200)">200</button>
         </div>
-        <div style="display: flex;justify-content: center;align-items: center">
-            <p id="withdrawInput" style="border: black solid 2px;background-color: white;width: 7%;font-size: 32px">
-                0</p>
-            <button class="menuBtn greenBtn" style="width: 6%">Enter</button>
+        <div class="rowContent">
+            <p id="inputWithdraw" style="margin-right: 15%;margin-left: 21%">0</p>
+            <button class="menuBtn round green greenBtn" style="width: 6%"
+                    onclick="confirmWithdraw(parseInt(inputWithdraw.innerText))">Enter
+            </button>
         </div>
-        <div style="display: flex;justify-content: center;align-items: center">
-            <button class="menuBtn withdrawBtn" onclick="">60</button>
+        <div class="rowContent">
+            <button class="menuBtn default round withdrawBtn withdrawLeft" onclick="confirmWithdraw(60)">60</button>
             <img class="arrowBtn" src="assets/downarrow20copy.png"
                  onclick="addWithdraw(-20)"
                  onmouseenter="this.src='assets/downarrow20copyhover.png'"
                  onmouseleave="this.src='assets/downarrow20copy.png'"
                  onmousedown="this.src='assets/downarrow20copy.png'"
                  onmouseup="this.src='assets/downarrow20copyhover.png'">
-            <button class="menuBtn withdrawBtn" onclick="">300</button>
+            <button class="menuBtn default round withdrawBtn withdrawRight" onclick="confirmWithdraw(300)">300</button>
         </div>
-        <div style="display: flex;justify-content: center;align-items: center">
-            <button class="menuBtn withdrawBtn" onclick="">80</button>
+        <div class="rowContent">
+            <button class="menuBtn default round withdrawBtn withdrawLeft" onclick="confirmWithdraw(80)">80</button>
             <img class="arrowBtn" src="assets/downarrow100copy.png"
                  onclick="addWithdraw(-100)"
                  onmouseenter="this.src='assets/downarrow100copyhover.png'"
                  onmouseleave="this.src='assets/downarrow100copy.png'"
                  onmousedown="this.src='assets/downarrow100copy.png'"
                  onmouseup="this.src='assets/downarrow100copyhover.png'">
-            <button class="menuBtn redBtn" style="width: 7%;margin-top: 0px" onclick="backWelcome(1)">Back</button>
+            <button class="menuBtn round red redBtn withdrawRight" style="width: 7%;margin-top: 0px"
+                    onclick="backWelcome(1)">
+                Back
+            </button>
         </div>
-    </div>
-    <div id="withdrawConfirm">
-        <h1 class="pageTitle" style="color: rgb(86, 165, 235)">Withdraw</h1>
-        <p id="withdrawResult"></p>
-        <button class="menuBtn greenBtn" style="width: 10%" onclick="">Yes</button>
-        <button class="menuBtn redBtn" style="width: 10%" onclick="">No</button>
-    </div>
-    <div id="withdrawDone">
-        <p>Money has been withdrawn</p>
-        <img src="assets/checkmark.png">
-        <button style="border:none;color: white;background-color: darkslategrey" onclick="">Home</button>
-        <button style="border:none;color: white;background-color: darkslategrey" onclick="">Perform Another Withdraw</button>
-        <button style="border:none;color: white;background-color: rgb(246, 96, 62)" onclick="">Return Card</button>
     </div>
 </div>
 
-<div id="depositPage" hidden></div>
-<div id="transferPage" hidden></div>
+<div id="depositPage" hidden>
+    <div class="mainContent" style="align-items: center">
+        <div style="justify-content: center;width: 40%">
+            <p class="message" style="font-size: 30px;">Enter the amount to deposit</p>
+            <div class="wrapper" style="display: flex;justify-content: center">
+                <div id="inputDeposit" class="inputCal">$0000.00</div>
+            </div>
+
+            <div class="wrapper" style="display: flex;justify-content: center">
+                <div class="calculator">
+                    <button class="calBtn cal1" onclick="clickCal(1)">1</button>
+                    <button class="calBtn cal2" onclick="clickCal(2)">2</button>
+                    <button class="calBtn cal3" onclick="clickCal(3)">3</button>
+
+                    <button class="calBtn cal4" onclick="clickCal(4)">4</button>
+                    <button class="calBtn cal5" onclick="clickCal(5)">5</button>
+                    <button class="calBtn cal6" onclick="clickCal(6)">6</button>
+
+                    <button class="calBtn cal7" onclick="clickCal(7)">7</button>
+                    <button class="calBtn cal8" onclick="clickCal(8)">8</button>
+                    <button class="calBtn cal9" onclick="clickCal(9)">9</button>
+
+                    <button class="calBtn cal0" onclick="clickCal(0)">0</button>
+                    <button class="calBtn dot" onclick="clickCal('.')">.</button>
+                    <button class="calBtn del" onclick="deleteCal()">Del</button>
+
+                    <button class="calBtn ent" onclick="confirmDeposit(parseFloat(inputDeposit.innerText))">Enter
+                    </button>
+                </div>
+            </div>
+        </div>
+        <button class="menuBtn round red redBtn withdrawRight" style="width: 7%;margin-top: 25px"
+                onclick="backWelcome(2)">
+            Back
+        </button>
+    </div>
+</div>
+
+<div id="transferPage" hidden>
+    <div class="mainContent" style="align-items: center">
+        <div style="display:flex;flex-direction: row;width: 100%">
+            <div style="width:35%;">
+                <h1 class="pageTitle">From</h1>
+                <div>
+                    <select id="from" class="round default menuBtn select" style="width: 50%;" name="from">
+                        <option value="" hidden>Choose an Account▼</option>
+                    </select>
+                </div>
+
+            </div>
+            <div style="justify-content: center;width: 30%">
+                <div class="wrapper">
+                    <div id="inputTransfer" class="inputCal">$0000.00</div>
+                </div>
+
+                <div class="wrapper">
+                    <div class="calculator">
+                        <button class="calBtn cal1" onclick="clickCal(1)">1</button>
+                        <button class="calBtn cal2" onclick="clickCal(2)">2</button>
+                        <button class="calBtn cal3" onclick="clickCal(3)">3</button>
+
+                        <button class="calBtn cal4" onclick="clickCal(4)">4</button>
+                        <button class="calBtn cal5" onclick="clickCal(5)">5</button>
+                        <button class="calBtn cal6" onclick="clickCal(6)">6</button>
+
+                        <button class="calBtn cal7" onclick="clickCal(7)">7</button>
+                        <button class="calBtn cal8" onclick="clickCal(8)">8</button>
+                        <button class="calBtn cal9" onclick="clickCal(9)">9</button>
+
+                        <button class="calBtn cal0" onclick="clickCal(0)">0</button>
+                        <button class="calBtn dot" onclick="clickCal('.')">.</button>
+                        <button class="calBtn del" onclick="deleteCal()">Del</button>
+
+                        <button class="calBtn ent" onclick="confirmDeposit(parseFloat(inputTransfer.innerText))">Enter
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div style="width: 35%;">
+                <h1 class="pageTitle">To</h1>
+                <div>
+                    <select id="to" class="menuBtn round default select"
+                            style="width: 50%;text-align: center;-webkit-appearance:none;
+                                    -moz-appearance:none;
+                                     appearance:none" name="to">
+                        <option value="" hidden>Choose an Account▼</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <button class="menuBtn round red redBtn withdrawRight" style="width: 7%;margin-top: 25px"
+                onclick="backWelcome(3)">
+            Back
+        </button>
+    </div>
+</div>
+
+<div id="confirmPage" hidden>
+    <h1 id="confirmQuestion" class="pageTitle">question</h1>
+    <p id="result" class="message">result</p>
+    <button class="menuBtn round green greenBtn" style="width: 10%" onclick="taskDone()">Yes</button>
+    <button class="menuBtn round red redBtn" style="width: 10%" onclick="backRecentPage()">No</button>
+</div>
+
+<div id="inputMoneyPage" hidden>
+    <div class="mainContent" style="align-items: center">
+        <p class="message">Enter the specified amount of money into the ATM</p>
+        <button class="round default menuBtn" onclick="inputMoneyDone()">OK</button>
+    </div>
+</div>
+
+<div id="donePage" hidden>
+    <div class="mainContent" style="align-items: center">
+        <p id="taskMessage" class="message">message</p>
+        <img src="assets/checkmark.png" style="width: 30%">
+        <div style="width: 80%">
+            <button class="round default" style="border:none;height:60px;width:10%;margin:5%"
+                    onclick="backWelcome(4)">
+                Home
+            </button>
+            <button id="redoTaskBtn"
+                    class="round default"
+                    style="border:none;height: 60px;width: 30%;margin: 5%"
+                    onclick="backRecentPage()">
+                Redo
+            </button>
+            <button class="round red"
+                    style="border:none;height: 60px;width: 15%;margin: 5%"
+                    onclick="returnAuth(1)">Return Card
+            </button>
+        </div>
+    </div>
+</div>
 
 </body>
 <script type="text/javascript" src="main.js"></script>

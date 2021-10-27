@@ -1,0 +1,255 @@
+/* Class CSS */
+/* Content layout related CSS */
+/* Set mainContent class CSS*/
+.mainContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} /* end mainContent class */
+
+/* Set rowContent class */
+.rowContent {
+    display: flex;
+    justify-content: center;
+    align-items: center
+} /* end rowContent class */
+
+/* Set wrapper class CSS*/
+.wrapper {
+    display: flex;
+    justify-content: center
+} /* end wrapper class */
+/* end Content layout */
+/*--------------------------------------------------*/
+/* Button related CSS */
+/* Set round class CSS*/
+.round {
+    border-radius: 8px;
+} /* end round class */
+
+/* Set default class CSS*/
+.default {
+    font-size: max(1.4vw, 17px);
+    color: rgb(236, 245, 255);
+    background-color: rgb(50, 69, 87);
+    border: black solid 6px;
+}
+.default:hover {
+    background-color: rgb(34, 45, 54);
+} /* end default class */
+
+/* Set menuBtn class CSS*/
+.menuBtn {
+    font-size: max(1.4vw, 17px);
+    height: 70px;
+    width: 30%;
+}
+.menuBtn:hover {
+    color: black;
+    background-color: rgb(170, 214, 231);
+}
+.menuBtn:active {
+    color: rgb(236, 245, 255);
+    background-color: black;
+} /* end menuBtn class */
+
+/* Set red class CSS*/
+.red {
+    color: rgb(236, 245, 255);
+    background-color: rgb(246, 96, 62);
+}
+.red:hover {
+    color: rgb(236, 245, 255);
+    background-color: red;
+}
+.red:active {
+    background-color: rgb(246, 96, 62);
+} /* end red class */
+
+/* Set green class CSS*/
+.green {
+    color: rgb(236, 245, 255);
+    background-color: rgb(16, 175, 159);
+}
+.green:hover {
+    color: rgb(236, 245, 255);
+    background-color: green;
+}
+.green:active {
+    color: rgb(236, 245, 255);
+} /* end green class */
+
+/* Set redBtn class CSS*/
+.redBtn {
+    position: relative;
+    margin-top: 25px;
+    border-top: rgb(255, 35, 6) solid 5px;
+    border-left: rgb(255, 35, 6) solid 5px;
+    border-bottom: rgb(192, 25, 5) solid 5px;
+    border-right: rgb(192, 25, 5) solid 5px;
+} /* end redBtn class */
+
+/* Set greenBtn class CSS*/
+.greenBtn {
+    position: relative;
+    border-top: rgb(0, 116, 20) solid 5px;
+    border-left: rgb(0, 116, 20) solid 5px;
+    border-bottom: rgb(14, 44, 20) solid 5px;
+    border-right: rgb(14, 44, 20) solid 5px;
+} /* end greenBtn class */
+
+/* Set numBtn class CSS*/
+.numBtn {
+    font-size: max(1vw, 17px);
+    width: 100%;
+    height: 80px;
+} /* end numBtn class */
+
+/* Set calBtn class CSS*/
+.calBtn {
+    font-size: max(1vw, 17px);
+    width: 100%;
+    height: 60px;
+} /* end calBtn class */
+
+/* Set withdrawBtn class CSS*/
+.withdrawBtn {
+    width: 7%;
+}
+.withdrawBtn:hover {
+    background-color: lightgray;
+} /* end withdrawBtn class */
+
+/* Set arrowBtn class CSS*/
+.arrowBtn {
+    width: 7%;
+}/* end arrowBtn class */
+
+/* Set withdrawLeft class CSS*/
+.withdrawLeft {
+    margin-right: 39%
+} /* end withdrawLeft class */
+
+/* Set withdrawRight class CSS*/
+.withdrawRight {
+    margin-left: 39%
+} /* end withdrawRight class */
+/* end Button layout */
+/*--------------------------------------------------*/
+/* Grid related CSS*/
+/* Set accountLog class CSS*/
+.accountLog {
+    background-color: lightgray;
+    text-align: left;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-areas: 'date date date fundIn fundOut runBalance'
+}
+.date {
+    grid-area: date;
+    margin: 5px;
+}
+.fundIn {
+    grid-area: fundIn;
+    margin: 5px;
+}
+.fundOut {
+    grid-area: fundOut;
+    margin: 5px;
+}
+.runBalance {
+    grid-area: runBalance;
+    margin: 5px;
+} /* end accountLog class */
+
+/* Set calculator class CSS*/
+.calculator {
+    margin-top: 25px;
+    width: 220px;
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "cal1 cal2 cal3"
+                         "cal4 cal5 cal6"
+                         "cal7 cal8 cal9"
+                         "cal0 dot   del"
+                         "ent ent ent";
+    grid-gap: 20px;
+    place-items: center;
+}
+.cal1{
+    grid-area: cal1;
+}
+.cal2{
+    grid-area: cal2;
+}
+.cal3{
+    grid-area: cal3;
+}
+.cal4{
+    grid-area: cal4;
+}
+.cal5{
+    grid-area: cal5;
+}
+.cal6{
+    grid-area: cal6;
+}
+.cal7{
+    grid-area: cal7;
+}
+.cal8{
+    grid-area: cal8;
+}
+.cal9{
+    grid-area: cal9;
+}
+.cal0{
+    grid-area: cal0;
+}
+.dot{
+    grid-area: dot;
+}
+.del{
+    grid-area: del;
+    color: red
+}
+.ent{
+    grid-area: ent;
+    color: green;
+} /* end calculator class */
+/* end Grid layout */
+/*--------------------------------------------------*/
+/* Set Other CSS*/
+/* Set pageTitle class CSS*/
+.pageTitle {
+    margin: 0px;
+    color: rgb(86, 165, 235);
+    font-size: max(4vw, 30px);
+} /* end pageTitle class */
+
+/* Set message class CSS*/
+.message {
+    font-size: max(0.7vw, 25px);
+} /* end message class */
+
+/* Set inputCal class CSS*/
+.inputCal {
+    color: grey;
+    border: black solid 1px;
+    font-size: 35px;
+    width: 65%;
+} /* end inputCal class */
+
+/* Set select class CSS*/
+.select {
+    text-align: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.select:hover {
+    color: rgb(236, 245, 255);
+    background-color: rgb(50, 69, 87);
+} /* end select class */
