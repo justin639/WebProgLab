@@ -7,6 +7,7 @@
     <title>SKKU ATM</title>
 </head>
 <body>
+<!-- Start Page -->
 <div id="authPage" class="mainContent" style="align-items: center;">
     <div>
         <h1 id="initTitle" class="pageTitle">SKKU ATM</h1>
@@ -30,7 +31,7 @@
         <button id="deleteBtn" class="numBtn" onclick="deleteNum()">Delete</button>
     </div>
 </div>
-
+<!-- Home Page -->
 <div id="welcomePage" hidden>
     <div class="mainContent">
         <h1 id="welcomeTitle" class="pageTitle">WELCOME TO SKKU BANK</h1>
@@ -48,7 +49,7 @@
         </button>
     </div>
 </div>
-
+<!-- Account Log Info Page -->
 <div id="accountInfoPage" hidden>
     <div class="mainContent">
         <h1 id="infoTitle" class="pageTitle">Account Information</h1>
@@ -76,7 +77,7 @@
         </button>
     </div>
 </div>
-
+<!-- Withdraw Page -->
 <div id="withdrawPage" hidden>
     <div class="mainContent">
         <div class="rowContent">
@@ -135,7 +136,7 @@
         </div>
     </div>
 </div>
-
+<!-- Deposit Page -->
 <div id="depositPage" hidden>
     <div class="mainContent" style="align-items: center">
         <div style="justify-content: center;width: 40%">
@@ -173,7 +174,7 @@
         </button>
     </div>
 </div>
-
+<!-- Transfer Page -->
 <div id="transferPage" hidden>
     <div class="mainContent" style="align-items: center">
         <div style="display:flex;flex-direction: row;width: 100%">
@@ -209,7 +210,7 @@
                         <button class="calBtn dot" onclick="clickCal('.')">.</button>
                         <button class="calBtn del" onclick="deleteCal()">Del</button>
 
-                        <button class="calBtn ent" onclick="confirmDeposit(parseFloat(inputTransfer.innerText))">Enter
+                        <button class="calBtn ent" onclick="confirmTransfer(parseFloat(inputTransfer.innerText))">Enter
                         </button>
                     </div>
                 </div>
@@ -233,21 +234,21 @@
         </button>
     </div>
 </div>
-
+<!-- Confirm Page -->
 <div id="confirmPage" hidden>
     <h1 id="confirmQuestion" class="pageTitle">question</h1>
     <p id="result" class="message">result</p>
     <button class="menuBtn round green greenBtn" style="width: 10%" onclick="taskDone()">Yes</button>
     <button class="menuBtn round red redBtn" style="width: 10%" onclick="backRecentPage()">No</button>
 </div>
-
+<!-- Input Money Page -->
 <div id="inputMoneyPage" hidden>
     <div class="mainContent" style="align-items: center">
         <p class="message">Enter the specified amount of money into the ATM</p>
         <button class="round default menuBtn" onclick="inputMoneyDone()">OK</button>
     </div>
 </div>
-
+<!-- Task Done Page -->
 <div id="donePage" hidden>
     <div class="mainContent" style="align-items: center">
         <p id="taskMessage" class="message">message</p>
@@ -270,7 +271,6 @@
         </div>
     </div>
 </div>
-
 </body>
 <script type="text/javascript" src="main.js"></script>
 </html>
