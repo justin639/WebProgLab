@@ -1,0 +1,115 @@
+body{
+    background-color: #384047;
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+}
+
+label{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+button{
+    margin-top: 30px;
+    width: 100%;
+    height: 50px;
+    color: white;
+    border: none;
+    background-color: #2F558E;
+    padding: 0px;
+}
+
+input{
+    border: 1px solid white;
+    padding-left: 5px;
+    width: 419px;
+    height: 30px;
+    color: white;
+    background-color: rgb(37,42,43);
+}
+
+.wrapper{
+    display: flex;
+    width: 950px;
+}
+
+.container{
+    width: 500px;
+    margin-top: 150px;
+    color: white;
+    background-color: rgb(37,42,43);
+}
+
+.title{
+    width: 250px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border-top: 10px solid #eeeeef;
+    text-align: center;
+    color: grey;
+    background-color: #eeeeef;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+.inTitle{
+    margin-top: 25px;
+    margin-bottom: 5px;
+}
+
+.selected{
+    color: black;
+    background-color: white;
+    border-top: 10px solid #2F558E;
+}
+
+.bold{
+    font-weight: bold;
+}
+.big{
+    font-size: 25px;
+}
+
+.radio{
+    width: auto;
+    height: auto;
+}
+
+.invalid{
+    border: 1px solid red;
+}
+
+.valid{
+    margin: 0px;
+    position: relative;
+    left: -50px;
+}
+
+.warning{
+    text-align: center;
+    margin: 0px;
+    padding: 10px;
+    position: relative;
+    left: 10px;
+    border-radius: 5px;
+    color: white;
+    max-width: 400px;
+    min-height: 20px;
+    background-color: #2F558E;
+}
+
+.red{
+    color: red;
+}
+
+.inputWrapper{
+    height: 59px;
+}
+
+#inputTable{
+    margin: 36px;
+}
