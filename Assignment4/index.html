@@ -10,16 +10,24 @@
 <body>
 
 <div class="container">
+    <!-- Switching Between Login and Sign Up -->
     <div class="row">
         <div id="loginTitle" class="title big selected" onclick="changeState(0)">Login</div>
         <div id="signUpTitle" class="title big" onclick="changeState(1)">Sign Up</div>
     </div>
+
+    <!-- The input forms section -->
     <div id="inputTable">
-        <div id="login" >
+
+        <!-- Login section -->
+        <div id="login">
             <p class="big bold">Login</p>
             <p id="inputMessage" class="bold">Enter user name and password:</p>
 
+            <!-- input table  -->
             <form id="loginForm" action="" method="get">
+
+                <!-- email -->
                 <div class="inputWrapper">
                     <p class="inTitle">Email</p>
                     <div id="emailAuthWrapper" class="wrapper">
@@ -28,6 +36,7 @@
                     </div>
                 </div>
 
+                <!-- password -->
                 <div class="inputWrapper">
                     <p class="inTitle">Password</p>
                     <div id="passAuthWrapper" class="wrapper">
@@ -36,13 +45,18 @@
                     </div>
                 </div>
             </form>
+
+            <!-- LogIn Button -->
             <button id="logInBtn" class="big">Login</button>
+
         </div>
 
+        <!-- Sign Up section -->
         <div id="signUp" hidden>
             <p class="big bold">Sign Up</p>
             <p class="bold">Fill in the form:</p>
 
+            <!-- input table  -->
             <form id="singInForm" action="" method="get">
 
                 <!-- First Name -->
@@ -63,7 +77,7 @@
                     </div>
                 </div>
 
-                <!-- Gender -->
+                <!-- Gender with Radio input -->
                 <div id="genderWrapper" class="inTitle wrapper" style="height: 20px">
                     <div style="width: 428px">
                         <input class="radio" id="male" name="gender" type="radio" value="male">
@@ -102,9 +116,12 @@
                 </div>
 
             </form>
+
+            <!-- Sign Up Button -->
             <button id="signUpBtn" class="big">Sign Up</button>
         </div>
 
+        <!-- Message section -->
         <div id="message" hidden>
             <p id="taskMessage" class="big bold">message</p>
         </div>
