@@ -4,7 +4,7 @@ $(document).ready(function () {
         // $('#firstParagraph1').css('color','grey');
         // $('#firstParagraph1').css('background','white');
         $('#firstParagraph1').css({color: 'grey', background: 'white'});
-        $('.secondParagraph2').addClass('heighlited');
+        $('.secondParagraph2').addClass('highlighted');
 
         // $('ul.list').empty();
         // $('ul.list').detach();
@@ -16,7 +16,7 @@ $(document).ready(function () {
 
     $('#btn2').click(function () {
         // $('.secondParagraph2').removeClass('heighlited');
-        $('.secondParagraph2').toggleClass('heighlited');
+        $('.secondParagraph2').toggleClass('highlighted');
         $('.contents').text('This is text added from JS');
         $('.contents').append('<h2>This is for testing</h2>');
         $('.contents').prepend('<h1>This is the title of the contents</h1>');
