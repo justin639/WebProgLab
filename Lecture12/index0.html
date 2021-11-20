@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+<input type="file" id="input" name="input">
+<button id="readfile" onclick="readFile()">Read File</button>
+<button id="readfilepro" onclick="readFilePro()">File Info</button>
+<textarea id="result" rows="6" cols="60"></textarea>
+<h3>Load Image</h3>
+<img id="preview" src="" width="300" height="300" alt="Preview"><br/>
+<input type="file" id="fileUpload" accept="image/*">
+
+<script>
+    function readFile() {
+        // File API를 지원하는지 확인
+        if (!window.File || !window.FileReader) {
+            alert('File API Unavailable');
+            return;
+        }
+        // file input에 입력된 file 목록을 수집
+        let files = document.getElementById('input').files;
+        if (!files.length) { // 파일 개수가 0개인 경우
+            alert('Select a file');
+            return;
+        }
+        let file = files[0];
+        let reader = new FileReader();
+        reader.readAsText(file, "euc-kr");
+
+        reader.onload = function () { // 읽기 동작이 완료됐을 때
+            document.getElementById('result').value = reader.result;
+        };
+    }
+
+    function readFilePro() {
+
+
+        let files = document.getElementById('input').files;
+        output = "";
+        for (let i = 0, f; f = files[i]; i++) { // 입력된 파일 개수만큼 반복
+            output += f.name + "\n";       /* f.name - Filename  */
+            output += f.type + "\n";                 /* f.type - File Type */
+            output += f.size + "bytes\n";             /* f.size - File Size */
+            output += f.lastModifiedDate + "\n";  /* f.lastModifiedDate */
+        }
+        document.getElementById('result').value = output;
+
+    }
+
+    let file = document.querySelector('#fileUpload');
+    file.onchange = function () { // 파일 입력란에 변화가 생긴 경우
+        let image = file.files[0];
+        let reader = new FileReader();
+        reader.readAsDataURL(image); // readAsText와 다른 함수
+        reader.onload = function () {
+            document.querySelector('#preview').src = reader.result;
+        };
+    };
+
+
+</script>
+</body>
+</html>

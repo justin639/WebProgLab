@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Socket programming </title>
+</head>
+<body>
+<button onclick="openWebSocket()">Open Socket</button>
+<button onclick="quitWebSocket()">Close Socket</button>
+<br/>
+<input type="text" id="data"/>
+<button onclick="send()">Send Data</button>
+<br/>
+Data received from the server :
+<output id="result"></output>
+</body>
+<script type="text/javascript">
+    let ws;
+
+    function openWebSocket() {
+        if ("WebSocket" in window) { // WebSocket API
+            ws = new WebSocket("ws://echo.websocket.org"); // WebSocket
+            ws.onopen = function () {
+                alert("WebSocket Open Success");
+            };
+            ws.onmessage = function (evt) {
+                let msg = evt.data;
+                document.getElementById("result").innerHTML = msg;
+            };
+            ws.onclose = function () {
+                alert("WebSocket Close");
+            };
+        } else {
+            alert("WebSocket unavailable");
+        }
+    }
+
+    function quitWebSocket() {
+        ws.close();
+    }
+
+    function send() {
+        ws.send(document.getElementById("data").value);
+    }
+</script>
+
+</html>

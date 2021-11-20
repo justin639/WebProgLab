@@ -1,91 +1,62 @@
-/*need to see the https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css */
+/* need to see the  https://getbootstrap.com/ */
+/* I can use the Bootstrap, so I learned how to use bootstrap */
 
+/* ========== Tag CSS part ========== */
+/* Usually setting default CSS */
+/* <body> CSS */
 body {
     background-color: rgb(219, 240, 235);
-    margin: 0px;
 }
 
+/* <header> CSS */
 header {
+    display: flex;
     padding: 0px;
     margin: 0px;
+    flex-direction: row;
     background-color: white;
 }
 
-button {
-    border: none;
-    border-radius: 2px;
-    padding: 10px;
-}
-
-input {
-    width: 460px;
-}
-
+/* <textarea> CSS */
 textarea {
-    width: 460px;
-    height: 100px;
+    height: 150px;
 }
+/* ========== Tag CSS end =========== */
 
+
+/* ========= Class CSS part ========= */
+/* Related to status or special types */
+/* Tried to reduce style implementation on HTML */
+/* Mostly overriding Bootstrap CSS */
+/* Space between header and card section */
 .container {
-    width: 400px;
-    margin-top: 15px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+    margin-top: 40px;
 }
 
-.container > .item {
-    flex: 1 1 30%; /*grow | shrink | basis */
+/* for card gap */
+.col {
+    padding-bottom: 40px;
 }
 
-.item {
-    background-color: white;
-    text-align: center;
+/* setting default height, in order to look better */
+/* cards with same height looks better than each with different height */
+.card {
+    max-width: 100%;
+    min-height: 100%;
+}
+.card-img-background {
+    height: 18.8rem;
+    object-fit: contain;
+    background-color: #eeeee3
 }
 
-.wrapper {
-    margin: 15px;
-}
-
+/* border radius set for card button */
 .round {
-    border-radius: 2px;
+    border-radius: 2rem;
 }
 
-.left {
-    float: left;
-    text-align: left;
-    width: 50%;
-}
-
-.right {
-    float: right;
-    text-align: right;
-    width: 50%;
-}
-
-.row-center {
-    align-self: center;
-}
-
-.white {
-    color: white;
-}
-
+/* font color green */
 .green {
     color: green;
 }
-
-.bold {
-    font-weight: bold;
-}
-
-#addDialog {
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    transform: translate(-50%, 0);
-    border: black solid 1px;
-    width: 500px;
-    background-color: white;
-}
+/* ========= Class CSS end ========== */
